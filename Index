@@ -1,9 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Fauzi Iskandar</title>
+  <meta name="description" content="Portofolio Fauzi Iskandar — biodata, skill, hobi, dan kontak" />
+  <style>
+    :root{
+      --bg:#0e1424; --card:#161f35; --muted:#aab4c5; --accent:#00bcd4; --accent-2:#ffb300;
+      --glass: rgba(255,255,255,0.05);
+      font-family: 'Poppins', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#091225);color:#e6eef6;line-height:1.6}
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;gap:20px}
+    .avatar{width:110px;height:110px;border-radius:18px;overflow:hidden;background:var(--glass);display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:30px}
+    p.lead{margin:6px 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:24px}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 8px 22px rgba(2,6,23,0.5)}
+    .section-title{font-weight:600;margin-bottom:12px;color:var(--accent)}
+    .biodata dl{display:grid;grid-template-columns:120px 1fr;row-gap:8px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:6px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .hobbies{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .hobby{background:var(--glass);padding:6px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04263a;font-weight:700;text-decoration:none}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    .photo-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:12px}
+    .photo-gallery div{background:var(--glass);border-radius:12px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:90px;height:90px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <img src="foto-saya.jpg" alt="Foto Fauzi Iskandar (gantikan dengan foto kamu)" />
+      </div>
+      <div>
+        <h1>Fauzi Iskandar</h1>
+        <p class="lead">Desainer & Editor — Portofolio Pribadi</p>
+        <p style="margin:8px 0;color:var(--muted);font-size:14px">Kerinci, Indonesia • Email: <a href="mailto:zhystory64@gmail.com" style="color:var(--accent);text-decoration:none">zhystory64@gmail.com</a> • WhatsApp: <a href="https://wa.me/6285263540527" style="color:var(--accent);text-decoration:none">085263540527</a></p>
+      </div>
+    </header><div class="grid">
+  <main>
+    <section class="card about">
+      <div class="section-title">Tentang Saya</div>
+      <p>Halo! Saya <strong>Fauzi Iskandar</strong>, seorang desainer dan editor visual yang senang bereksperimen dengan ide kreatif. Saya lahir di <strong>Kerinci</strong> dan memiliki ketertarikan besar terhadap desain, editing video, serta dunia digital. Saya menikmati membuat visual dari ide sederhana menjadi sesuatu yang menarik dan bermakna.</p>
+    </section>
 
-    <title>Memulai dengan HTML</title>
+    <section class="card" style="margin-top:16px">
+      <div class="section-title">Keahlian</div>
+      <div class="skills">
+        <span class="skill">Adobe Photoshop</span>
+        <span class="skill">Adobe After Effects</span>
+        <span class="skill">Artificial Intelligence Tools</span>
+        <span class="skill">Desain Visual</span>
+        <span class="skill">Editing Video</span>
+      </div>
+    </section>
 
-    <h1>Hello world</h1>
+    <section class="card" style="margin-top:16px">
+      <div class="section-title">Hobi</div>
+      <div class="hobbies">
+        <span class="hobby">Main Game</span>
+        <span class="hobby">Eksperimen AI</span>
+        <span class="hobby">Desain Visual</span>
+        <span class="hobby">Fotografi</span>
+      </div>
+    </section>
 
+    <section class="card" style="margin-top:16px">
+      <div class="section-title">Album Foto</div>
+      <p style="color:var(--muted);font-size:14px">Berikut template album untuk menampilkan koleksi foto kamu. Ganti kotak ini dengan foto-fotomu.</p>
+      <div class="photo-gallery">
+        <div>Foto 1</div>
+        <div>Foto 2</div>
+        <div>Foto 3</div>
+        <div>Foto 4</div>
+      </div>
+    </section>
+  </main>
+
+  <aside>
+    <div class="card biodata">
+      <div class="section-title">Biodata</div>
+      <dl>
+        <dt>Nama</dt><dd>Fauzi Iskandar</dd>
+        <dt>Tempat Lahir</dt><dd>Kerinci</dd>
+        <dt>Pendidikan</dt><dd>Universitas Adzkia — S1</dd>
+        <dt>Email</dt><dd><a href="mailto:zhystory64@gmail.com" style="color:var(--accent);text-decoration:none">zhystory64@gmail.com</a></dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/6285263540527" style="color:var(--accent);text-decoration:none">085263540527</a></dd>
+        <dt>Instagram</dt><dd><a href="https://instagram.com/__syazeyy" style="color:var(--accent);text-decoration:none">@__syazeyy</a></dd>
+      </dl>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  © <span id="year"></span> Fauzi Iskandar — Portofolio pribadi dengan tema gelap kontras.
+</footer>
+
+  </div>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script></body>
 </html>
